@@ -8,10 +8,10 @@ def run_api():
         script_path = os.path.join(os.getcwd(), 'API', 'quick_checkup_API.py')
         
         if not os.path.exists(script_path):
-            print(f"File {script_path} tidak ditemukan.")
+            print(f"File {script_path} Not Found.")
             return
         
-        print(f"Menjalankan API: {script_path}")
+        print(f"Running API: {script_path}")
         process = subprocess.Popen(
             ['python', script_path],
             stdout=subprocess.PIPE, 
@@ -30,7 +30,7 @@ def run_api():
             print(stdout.decode())
 
     except Exception as e:
-        print(f"Terjadi kesalahan: {e}")
+        print(f"Error occured: {e}")
 
 if __name__ == "__main__":
     run_api()
