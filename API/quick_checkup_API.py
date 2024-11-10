@@ -30,8 +30,8 @@ def predict_disease(symptoms):
         else:
             symp_weights.append(0)  # Jika tidak ditemukan, isi dengan 0
     
-    # Isi kekurangan gejala dengan 0 hingga mencapai panjang input yang diperlukan model
-    symp_weights = symp_weights + [0] * (4 - len(symp_weights))  # Pastikan hanya 4 fitur
+    # Isi kekurangan gejala dengan 0 hingga mencapai panjang input yang diperlukan model (17 fitur)
+    symp_weights = symp_weights + [0] * (17 - len(symp_weights))  # Pastikan input hanya 17 fitur
     
     # Prediksi penyakit
     try:
@@ -55,17 +55,14 @@ def predict():
     # Mendapatkan data gejala dari request JSON
     data = request.get_json()
     
-    # Ambil gejala dari JSON dengan key khusus
+    # Ambil gejala dari JSON dengan key khusus untuk 17 fitur
     symptoms = [
-        data.get("Symptom_1", ""),
-        data.get("Symptom_2", ""),
-        data.get("Symptom_3", ""),
-        data.get("Symptom_4", "")
+        data.get(f"Symptom_{i}", "") for i in range(1, 18)
     ]
     
     # Validasi input
     if not any(symptoms):
-        return jsonify({"error": "Input tidak valid. Pastikan format JSON berisi Symptom_1 hingga Symptom_4."}), 400
+        return jsonify({"error": "Input tidak valid. Pastikan format JSON berisi Symptom_1 hingga Symptom_17."}), 400
 
     # Melakukan prediksi
     result = predict_disease(symptoms)
