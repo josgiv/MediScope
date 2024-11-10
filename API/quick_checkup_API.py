@@ -1,17 +1,22 @@
+import os
 from flask import Flask, request, jsonify
 import pandas as pd
 import numpy as np
 import joblib
 
-
 app = Flask(__name__)
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "../models/rf_QuickCheckup.joblib")
+SYMP_DESC_PATH = os.path.join(BASE_DIR, "../model-notebook/datasets/quick_checkup/symptom_Description.csv")
+SYMPTOM_PRECAUTION_PATH = os.path.join(BASE_DIR, "../model-notebook/datasets/quick_checkup/symptom_precaution.csv")
+SYMP_SEVERITY_PATH = os.path.join(BASE_DIR, "../model-notebook/datasets/quick_checkup/Symptom-severity.csv")
 
 try:
-    loaded_rf = joblib.load("../models/rf_QuickCheckup.joblib")
-    symptom_Description = pd.read_csv("../model-notebook/datasets/quick_checkup/symptom_Description.csv")
-    Symptom_Precaution = pd.read_csv("../model-notebook/datasets/quick_checkup/symptom_precaution.csv")
-    df1 = pd.read_csv('../model-notebook/datasets/quick_checkup/Symptom-severity.csv')
+    loaded_rf = joblib.load(MODEL_PATH)
+    symptom_Description = pd.read_csv(SYMP_DESC_PATH)
+    Symptom_Precaution = pd.read_csv(SYMPTOM_PRECAUTION_PATH)
+    df1 = pd.read_csv(SYMP_SEVERITY_PATH)
 except Exception as e:
     print(f"Error loading resources: {e}")
 
@@ -45,14 +50,12 @@ def predict_disease(symptoms):
 
 @app.route('/quick-checkup', methods=['POST'])
 def predict():
-
     data = request.get_json()
     symptoms = [
         data.get(f"Symptom_{i}", "") for i in range(1, 18)
     ]
     if not any(symptoms):
         return jsonify({"error": "Input tidak valid. Pastikan format JSON berisi Symptom_1 hingga Symptom_17."}), 400
-
 
     result = predict_disease(symptoms)
     
