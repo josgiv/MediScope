@@ -1,6 +1,4 @@
-Here's an updated `README.md` file with the additional feature "Quick Checkup" included, as per your request:
 
-```markdown
 # MediScope: Full Checkup Prediction Service
 
 ## Overview
@@ -59,7 +57,7 @@ Set these variables in your environment:
 export STROKE_API_URL=http://localhost:5001/fc-stroke
 export HEARTD_API_URL=http://localhost:5002/fc-heartd
 export DIABETES_API_URL=http://localhost:5003/fc-diabetes
-```
+
 
 Alternatively, you can modify the URLs directly in the `models_loader.py` script.
 
