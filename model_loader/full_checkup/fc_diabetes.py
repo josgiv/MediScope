@@ -31,16 +31,11 @@ from sklearn.preprocessing import MinMaxScaler
 sc = MinMaxScaler(feature_range=(0, 1))
 dataset_scaled = sc.fit_transform(dataset_X)
 
-# Define route for the homepage
-@app.route('/')
-def home():
-    return render_template('index.html')
+
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    '''
-    For rendering results on HTML GUI
-    '''
+
     # Get input from JSON request body
     data = request.get_json()
 
