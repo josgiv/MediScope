@@ -7,7 +7,7 @@ import joblib
 app = Flask(__name__)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(BASE_DIR, "../models/rf_QuickCheckup.joblib")
+MODEL_PATH = os.path.join(BASE_DIR, "../models/quick_checkup/rf_QuickCheckup.joblib")
 SYMP_DESC_PATH = os.path.join(BASE_DIR, "../model-notebook/datasets/quick_checkup/symptom_Description.csv")
 SYMPTOM_PRECAUTION_PATH = os.path.join(BASE_DIR, "../model-notebook/datasets/quick_checkup/symptom_precaution.csv")
 SYMP_SEVERITY_PATH = os.path.join(BASE_DIR, "../model-notebook/datasets/quick_checkup/Symptom-severity.csv")
