@@ -33,7 +33,7 @@ dataset_scaled = sc.fit_transform(dataset_X)
 
 
 
-@app.route('/predict', methods=['POST'])
+@app.route('/fc-diabetes', methods=['POST'])
 def predict():
 
     # Get input from JSON request body
@@ -42,10 +42,10 @@ def predict():
     # Extract feature values from the JSON data
     try:
         # Pastikan data JSON memiliki semua fitur yang diperlukan
-        glucose = float(data['Glucose'])
-        blood_pressure = float(data['BloodPressure'])
-        bmi = float(data['BMI'])
-        age = float(data['Age'])
+        glucose = float(data['glucose'])
+        blood_pressure = float(data['bloodpressure'])
+        bmi = float(data['bmi'])
+        age = float(data['age'])
 
         float_features = [glucose, blood_pressure, bmi, age]
         final_features = [np.array(float_features)]

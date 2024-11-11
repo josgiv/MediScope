@@ -18,7 +18,7 @@ try:
 except Exception as e:
     print(f"Failed to load model. Error: {e}")
 
-@app.route('/predict', methods=['POST'])
+@app.route('/fc-stroke', methods=['POST'])
 def predict():
     if request.is_json:
         data = request.get_json()
@@ -28,17 +28,17 @@ def predict():
         maritalstatus = data.get('maritalstatus', 'not married')
         worktype = data.get('Worktype', 'privatejob')
         residence = data.get('Residence', 'urban')
-        gender = data.get('gender', 'Male')
+        sex = data.get('Sex', 'Male')
         bmi = data.get('bmi', 0.0)
-        gluclevel = data.get('gluclevel', 0.0)
+        glucose = data.get('glucose', 0.0)
         smoke = data.get('Smoke', 'non-smoker')
         hypertension = data.get('Hypertension', 'nohypten')
-        heartdisease = data.get('1', '0')
+        heartdisease = data.get('heartdis', 'noheartdis')
 
         # Input mapping for model
         mappings = {
             'residence': {'urban': 1, 'rural': 0},
-            'gender': {'Female': 0, 'Male': 1},
+            'sex': {'Female': 0, 'Male': 1},
             'maritalstatus': {'married': 1, 'not married': 0},
             'worktype': {'privatejob': 2, 'govtemp': 1, 'selfemp': 3},
             'smoke': {'formerly-smoked': 1, 'non-smoker': 2, 'smoker': 3},
@@ -48,7 +48,7 @@ def predict():
 
         # Convert input values using mappings
         residence = mappings['residence'].get(residence, 1)
-        gender = mappings['gender'].get(gender, 1)
+        sex = mappings['sex'].get(sex, 1)
         maritalstatus = mappings['maritalstatus'].get(maritalstatus, 0)
         worktype = mappings['worktype'].get(worktype, 2)
         smoke = mappings['smoke'].get(smoke, 2)
@@ -56,7 +56,7 @@ def predict():
         heartdisease = mappings['heartdisease'].get(heartdisease, 0)
 
         # Prepare input array for prediction
-        input_array = np.array([[gender, age, hypertension, heartdisease, maritalstatus, worktype, residence, gluclevel, bmi, smoke]], dtype='float64')
+        input_array = np.array([[sex, age, hypertension, heartdisease, maritalstatus, worktype, residence, glucose, bmi, smoke]], dtype='float64')
         
         # Predict stroke
         try:

@@ -17,7 +17,7 @@ print("Current working directory: ", os.getcwd())
 print("Model loaded from: ", MODEL_PATH)
 
 # Define the prediction endpoint
-@app.route('/predict', methods=['POST'])
+@app.route('/fc-heartd', methods=['POST'])
 def predict():
     try:
         # Get JSON input from user
@@ -28,7 +28,7 @@ def predict():
             data['age'],
             data['sex'],
             data['cp'],
-            data['trestbps'],
+            data['bloodpressure'],
             data['chol'],
             data['fbs'],
             data['restecg'],
