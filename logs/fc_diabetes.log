@@ -1,42 +1,34 @@
  * Serving Flask app 'fc_diabetes'
  * Debug mode: on
 rvice.
-[2024-11-12 09:25:24,619] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
-[2024-11-12 09:25:24,619] INFO: Model path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\diabetes_models\svc_diabetes.joblib
-[2024-11-12 09:25:24,619] INFO: Dataset path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\diabetes-dataset.csv
-[2024-11-12 09:25:24,703] INFO: Model loaded successfully.
-[2024-11-12 09:25:24,706] INFO: Dataset loaded successfully.
-[2024-11-12 09:25:24,708] INFO: Dataset scaling completed.
-[2024-11-12 09:25:24,708] INFO: Starting Flask app.
-[2024-11-12 09:25:24,729] INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+[2024-11-12 13:49:15,443] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
+[2024-11-12 13:49:15,443] INFO: Model path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\diabetes_models\svc_diabetes.joblib
+[2024-11-12 13:49:15,443] INFO: Dataset path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\diabetes-dataset.csv
+[2024-11-12 13:49:16,231] INFO: Model loaded successfully.
+[2024-11-12 13:49:16,247] INFO: Dataset loaded successfully.
+[2024-11-12 13:49:16,251] INFO: Dataset scaling completed.
+[2024-11-12 13:49:16,252] INFO: Starting Flask app.
+[2024-11-12 13:49:16,292] INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5003
- * Running on http://192.156.1.3:5003
-[2024-11-12 09:25:24,730] INFO: [33mPress CTRL+C to quit[0m
-[2024-11-12 09:25:24,740] INFO:  * Restarting with watchdog (windowsapi)
-[2024-11-12 09:25:26,354] INFO: Starting fc_diabetes service.
-[2024-11-12 09:25:26,354] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
-[2024-11-12 09:25:26,354] INFO: Model path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\diabetes_models\svc_diabetes.joblib
-[2024-11-12 09:25:26,354] INFO: Dataset path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\diabetes-dataset.csv
-[2024-11-12 09:25:26,440] INFO: Model loaded successfully.
-[2024-11-12 09:25:26,443] INFO: Dataset loaded successfully.
-[2024-11-12 09:25:26,444] INFO: Dataset scaling completed.
-[2024-11-12 09:25:26,445] INFO: Starting Flask app.
-[2024-11-12 09:25:26,458] WARNING:  * Debugger is active!
-[2024-11-12 09:25:26,463] INFO:  * Debugger PIN: 889-200-437
-[2024-11-12 09:25:34,472] INFO: Received a prediction request.
-[2024-11-12 09:25:34,472] INFO: Input features: [22222222220.5, 13.0, 10.0, 55.0]
-[2024-11-12 09:25:34,472] INFO: Prediction result: You have Diabetes, please consult a Doctor.
-[2024-11-12 09:25:34,473] INFO: 127.0.0.1 - - [12/Nov/2024 09:25:34] "POST /fc-diabetes HTTP/1.1" 200 -
-[2024-11-12 09:25:35,081] INFO: Received a prediction request.
-[2024-11-12 09:25:35,082] INFO: Input features: [22222222220.5, 13.0, 10.0, 55.0]
-[2024-11-12 09:25:35,082] INFO: Prediction result: You have Diabetes, please consult a Doctor.
-[2024-11-12 09:25:35,082] INFO: 127.0.0.1 - - [12/Nov/2024 09:25:35] "POST /fc-diabetes HTTP/1.1" 200 -
-[2024-11-12 09:25:40,512] INFO: Received a prediction request.
-[2024-11-12 09:25:40,512] INFO: Input features: [180.5, 130.0, 32.0, 55.0]
-[2024-11-12 09:25:40,513] INFO: Prediction result: You have Diabetes, please consult a Doctor.
-[2024-11-12 09:25:40,513] INFO: 127.0.0.1 - - [12/Nov/2024 09:25:40] "POST /fc-diabetes HTTP/1.1" 200 -
-[2024-11-12 09:25:43,561] INFO: Received a prediction request.
-[2024-11-12 09:25:43,561] INFO: Input features: [180.5, 130.0, 321111111111.0, 55.0]
-[2024-11-12 09:25:43,562] INFO: Prediction result: You have Diabetes, please consult a Doctor.
-[2024-11-12 09:25:43,562] INFO: 127.0.0.1 - - [12/Nov/2024 09:25:43] "POST /fc-diabetes HTTP/1.1" 200 -
+ * Running on http://192.168.137.22:5003
+[2024-11-12 13:49:16,292] INFO: [33mPress CTRL+C to quit[0m
+[2024-11-12 13:49:16,306] INFO:  * Restarting with watchdog (windowsapi)
+[2024-11-12 13:49:18,983] INFO: Starting fc_diabetes service.
+[2024-11-12 13:49:18,983] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
+[2024-11-12 13:49:18,983] INFO: Model path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\diabetes_models\svc_diabetes.joblib
+[2024-11-12 13:49:18,983] INFO: Dataset path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\diabetes-dataset.csv
+[2024-11-12 13:49:19,139] INFO: Model loaded successfully.
+[2024-11-12 13:49:19,144] INFO: Dataset loaded successfully.
+[2024-11-12 13:49:19,145] INFO: Dataset scaling completed.
+[2024-11-12 13:49:19,146] INFO: Starting Flask app.
+[2024-11-12 13:49:19,171] WARNING:  * Debugger is active!
+[2024-11-12 13:49:19,179] INFO:  * Debugger PIN: 889-200-437
+[2024-11-12 13:56:20,135] INFO: Received a prediction request.
+[2024-11-12 13:56:20,136] INFO: Input features: [22222222220.5, 13.0, 10.0, 55.0]
+[2024-11-12 13:56:20,141] INFO: Prediction result: You have Diabetes, please consult a Doctor.
+[2024-11-12 13:56:20,142] INFO: 127.0.0.1 - - [12/Nov/2024 13:56:20] "POST /fc-diabetes HTTP/1.1" 200 -
+[2024-11-12 13:56:29,974] INFO: Received a prediction request.
+[2024-11-12 13:56:29,975] INFO: Input features: [40.5, 13.0, 10.0, 55.0]
+[2024-11-12 13:56:29,975] INFO: Prediction result: You don't have Diabetes.
+[2024-11-12 13:56:29,976] INFO: 127.0.0.1 - - [12/Nov/2024 13:56:29] "POST /fc-diabetes HTTP/1.1" 200 -

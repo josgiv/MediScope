@@ -6,22 +6,3 @@ INFO:werkzeug:[33mPress CTRL+C to quit[0m
 INFO:werkzeug: * Restarting with watchdog (windowsapi)
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 889-200-437
-INFO:root:Attempt 1: Requesting prediction from http://localhost:5001/fc-stroke
-INFO:root:Attempt 1: Requesting prediction from http://localhost:5002/fc-heartd
-INFO:root:Attempt 1: Requesting prediction from http://localhost:5003/fc-diabetes
-INFO:root:Received response from http://localhost:5001/fc-stroke: {'stroke_prediction': 'You will not get stroke'}
-INFO:root:Received response from http://localhost:5002/fc-heartd: {'prediction': 'The patient is not likely to have heart disease.'}
-INFO:root:Received response from http://localhost:5003/fc-diabetes: {'prediction': 'You have Diabetes, please consult a Doctor.'}
-INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 09:25:40] "POST /predict HTTP/1.1" 200 -
-INFO:root:Attempt 1: Requesting prediction from http://localhost:5001/fc-stroke
-INFO:root:Attempt 1: Requesting prediction from http://localhost:5002/fc-heartd
-INFO:root:Attempt 1: Requesting prediction from http://localhost:5003/fc-diabetes
-INFO:root:Received response from http://localhost:5002/fc-heartd: {'prediction': 'The patient is not likely to have heart disease.'}
-INFO:root:Received response from http://localhost:5003/fc-diabetes: {'prediction': 'You have Diabetes, please consult a Doctor.'}
-INFO:root:Received response from http://localhost:5001/fc-stroke: {'stroke_prediction': 'You will get stroke'}
-INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 09:25:43] "POST /predict HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\full_checkup.py', reloading
-INFO:werkzeug: * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\full_checkup.py', reloading
-INFO:werkzeug: * Restarting with watchdog (windowsapi)
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 889-200-437
