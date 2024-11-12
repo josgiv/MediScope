@@ -4,8 +4,6 @@ import os
 from joblib import load
 
 app = Flask(__name__)
-
-# Print current working directory and model path for debugging
 print("Current working directory: ", os.getcwd())
 
 # Define the absolute path for the model
