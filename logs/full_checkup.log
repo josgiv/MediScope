@@ -6,3 +6,10 @@ INFO:werkzeug:[33mPress CTRL+C to quit[0m
 INFO:werkzeug: * Restarting with watchdog (windowsapi)
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 889-200-437
+INFO:root:Attempt 1: Requesting prediction from http://localhost:5001/fc-stroke
+INFO:root:Attempt 1: Requesting prediction from http://localhost:5002/fc-heartd
+INFO:root:Attempt 1: Requesting prediction from http://localhost:5003/fc-diabetes
+INFO:root:Received response from http://localhost:5003/fc-diabetes: {'prediction': 'You have Diabetes, please consult a Doctor.'}
+INFO:root:Received response from http://localhost:5001/fc-stroke: {'stroke_prediction': 'You will not get stroke'}
+INFO:root:Received response from http://localhost:5002/fc-heartd: {'prediction': 'The patient is likely to have heart disease.'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 14:59:15] "POST /predict HTTP/1.1" 200 -
