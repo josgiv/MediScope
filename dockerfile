@@ -27,7 +27,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Expose port untuk setiap service
-EXPOSE 5000 5001 5002 5003 5004 5009 5010
+EXPOSE 4999 5000 5001 5002 5003 5004 5009 5010
 
 # Tentukan command untuk menjalankan aplikasi
-CMD ["python", "main.py"]
+CMD ["sh", "-c", "python main.py"]

@@ -8,11 +8,3 @@ Press CTRL+C to quit
  * Restarting with watchdog (windowsapi)
  * Debugger is active!
  * Debugger PIN: 506-842-495
-127.0.0.1 - - [13/Nov/2024 14:50:10] "POST /quick-checkup HTTP/1.1" 200 -
- * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_diabetes.py', reloading
- * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_diabetes.py', reloading
- * Restarting with watchdog (windowsapi)
- * Debugger is active!
- * Debugger PIN: 506-842-495
-127.0.0.1 - - [13/Nov/2024 15:09:59] "POST /quick-checkup HTTP/1.1" 200 -
-127.0.0.1 - - [13/Nov/2024 15:09:59] "POST /quick-checkup HTTP/1.1" 200 -
