@@ -1,0 +1,26 @@
+ * Serving Flask app 'fc_stroke'
+ * Debug mode: on
+rvice.
+[2024-11-13 14:49:56,225] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
+[2024-11-13 14:49:57,217] INFO: Model loaded successfully from E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\stroke_model.joblib
+[2024-11-13 14:49:57,217] INFO: Starting Flask app for Stroke prediction.
+[2024-11-13 14:49:57,247] INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.80.121:5001
+[2024-11-13 14:49:57,247] INFO: [33mPress CTRL+C to quit[0m
+[2024-11-13 14:49:57,260] INFO:  * Restarting with watchdog (windowsapi)
+[2024-11-13 14:49:58,287] INFO: Starting fc_stroke service.
+[2024-11-13 14:49:58,287] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
+[2024-11-13 14:49:59,085] INFO: Model loaded successfully from E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\stroke_model.joblib
+[2024-11-13 14:49:59,085] INFO: Starting Flask app for Stroke prediction.
+[2024-11-13 14:49:59,098] WARNING:  * Debugger is active!
+[2024-11-13 14:49:59,101] INFO:  * Debugger PIN: 506-842-495
+[2024-11-13 14:50:03,582] INFO: Received a stroke prediction request.
+[2024-11-13 14:50:03,588] INFO: Risk factors data loaded successfully.
+[2024-11-13 14:50:03,589] INFO: Prediction result: Anda berkemungkinan terkena Stroke, harap konsultasikan dengan dokter.
+[2024-11-13 14:50:03,590] INFO: 127.0.0.1 - - [13/Nov/2024 14:50:03] "POST /fc-stroke HTTP/1.1" 200 -
+[2024-11-13 14:50:08,719] INFO: Received a stroke prediction request.
+[2024-11-13 14:50:08,726] INFO: Risk factors data loaded successfully.
+[2024-11-13 14:50:08,728] INFO: Prediction result: Anda tidak berkemungkinan terkena Stroke.
+[2024-11-13 14:50:08,729] INFO: 127.0.0.1 - - [13/Nov/2024 14:50:08] "POST /fc-stroke HTTP/1.1" 200 -
