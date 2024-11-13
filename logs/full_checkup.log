@@ -13,3 +13,8 @@ INFO:root:Received response from http://localhost:5001/fc-stroke: {'faktor_risik
 INFO:root:Received response from http://localhost:5002/fc-heartd: {'faktor_risiko_heartd': 'Faktor-faktor risiko untuk penyakit jantung: Tobacco, old age, High blood cholesterol, Obesity, Diabetes, Stress, An autoimmune condition', 'prediksi_heartd': 'Pasien kemungkinan besar memiliki penyakit jantung.', 'saran_heartd': "Beberapa langkah pencegahan untuk mengurangi risiko penyakit jantung: Eat a healthy diet, Get regular exercise, Limit alcohol, Don't smoke, Manage stress"}
 INFO:root:Received response from http://localhost:5003/fc-diabetes: {'faktor_risiko_diabetes': 'Hal-hal yang menyebabkan dapat terkena diabetes: coronary artery disease with chest pain, heart attack, stroke and narrowing of arteries', 'prediksi_diabetes': 'Anda berkemungkinan terkena Diabetes, harap konsultasikan dengan dokter.', 'saran_diabetes': 'Anda dapat melakukan beberapa hal berikut untuk menurunkan risiko diabetes: have balanced diet,exercise,consult doctor,follow up'}
 INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 14:50:08] "POST /full-checkup HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_diabetes.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_diabetes.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-842-495

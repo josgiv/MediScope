@@ -6,9 +6,3 @@ seaborn
 flask
 joblib
 plotly
-quart 
-redis 
-aioredis 
-requests 
-asyncio
-aiohttp
