@@ -1,29 +1,45 @@
+# fc_stroke.py
+
 from flask import Flask, request, jsonify
 import numpy as np
 import os
+import pandas as pd
+import logging
 from joblib import load
 
+# Initialize Flask app
 app = Flask(__name__)
 
-# Print current working directory and model path for debugging
-print("Current working directory: ", os.getcwd())
+# Set up logging
+log_dir = 'logs'
+os.makedirs(log_dir, exist_ok=True)
+logging.basicConfig(filename=os.path.join(log_dir, 'fc_stroke.log'),
+                    level=logging.INFO,
+                    format='[%(asctime)s] %(levelname)s: %(message)s')
+logger = logging.getLogger(__name__)
 
-# Define the absolute path for the model
+logger.info("Starting fc_stroke service.")
+logger.info(f"Current working directory: {os.getcwd()}")
+
+# Define paths
 MODEL_PATH = os.path.join(os.getcwd(), 'models', 'full_checkup', 'stroke_model.joblib')
+RISK_FACTORS_PATH = os.path.join(os.getcwd(), 'model-notebook', 'datasets', 'full_checkup', 'disease_riskFactors.csv')
 
 # Load model
 try:
     model = load(MODEL_PATH)
-    print(f"Model loaded successfully from {MODEL_PATH}")
+    logger.info(f"Model loaded successfully from {MODEL_PATH}")
 except Exception as e:
-    print(f"Failed to load model. Error: {e}")
+    logger.error(f"Failed to load model. Error: {e}")
+    raise
 
 @app.route('/fc-stroke', methods=['POST'])
 def predict():
+    logger.info("Received a stroke prediction request.")
     if request.is_json:
         data = request.get_json()
         
-        # Extract and set default values
+        # Extract input features with default values
         age = data.get('age', 0)
         maritalstatus = data.get('maritalstatus', 'not married')
         worktype = data.get('Worktype', 'privatejob')
@@ -35,7 +51,7 @@ def predict():
         hypertension = data.get('Hypertension', 'nohypten')
         heartdisease = data.get('heartdis', 'noheartdis')
 
-        # Input mapping for model
+        # Mapping categorical values to numeric for the model
         mappings = {
             'residence': {'urban': 1, 'rural': 0},
             'sex': {'Female': 0, 'Male': 1},
@@ -46,7 +62,7 @@ def predict():
             'heartdisease': {'heartdis': 1, 'noheartdis': 0}
         }
 
-        # Convert input values using mappings
+        # Convert input features to numeric values
         residence = mappings['residence'].get(residence, 1)
         sex = mappings['sex'].get(sex, 1)
         maritalstatus = mappings['maritalstatus'].get(maritalstatus, 0)
@@ -63,16 +79,50 @@ def predict():
             pred_stroke = model.predict(input_array)
             result = int(pred_stroke[0])
 
-            # JSON response
-            response = {
-                "stroke_prediction": "You will get stroke" if result == 1 else "You will not get stroke"
-            }
-            return jsonify(response)
-        
+            # Load risk factors and precautions data
+            try:
+                risk_factors_df = pd.read_csv(RISK_FACTORS_PATH, encoding='latin1')
+                logger.info("Risk factors data loaded successfully.")
+            except Exception as e:
+                logger.error(f"Error loading risk factors data: {e}")
+                return jsonify({'error': 'Error loading risk factors data'}), 500
+
+            # Find Stroke-related information
+            stroke_info = risk_factors_df[risk_factors_df['DNAME'] == 'Stroke']
+            if not stroke_info.empty:
+                precautions = stroke_info.iloc[0]['PRECAU']
+                risk_factors = stroke_info.iloc[0]['RISKFAC']
+            else:
+                precautions = "Informasi pencegahan tidak tersedia."
+                risk_factors = "Informasi faktor risiko tidak tersedia."
+
+            # Interpretation of the prediction
+            if result == 1:
+                prediksi_stroke = "Anda berkemungkinan terkena Stroke, harap konsultasikan dengan dokter."
+                saran_stroke = f"Anda dapat melakukan beberapa hal berikut untuk menurunkan risiko stroke: {precautions}"
+                faktor_risiko_stroke = f"Hal-hal yang dapat menyebabkan stroke: {risk_factors}"
+            else:
+                prediksi_stroke = "Anda tidak berkemungkinan terkena Stroke."
+                saran_stroke = f"Anda tetap dapat melakukan hal ini untuk mencegah stroke: {precautions}"
+                faktor_risiko_stroke = f"Hal-hal yang dapat menyebabkan stroke: {risk_factors}"
+
+            # Log the prediction result
+            logger.info(f"Prediction result: {prediksi_stroke}")
+
+            # Return prediction as JSON response
+            return jsonify({
+                'prediksi_stroke': prediksi_stroke,
+                'saran_stroke': saran_stroke,
+                'faktor_risiko_stroke': faktor_risiko_stroke
+            })
+
         except Exception as e:
+            logger.error(f"Prediction failed. Error: {e}")
             return jsonify({"error": f"Prediction failed. Error: {e}"}), 500
     else:
+        logger.error("Request content-type is not JSON.")
         return jsonify({"error": "Request must be JSON"}), 400
 
 if __name__ == "__main__":
+    logger.info("Starting Flask app for Stroke prediction.")
     app.run(debug=True, host='0.0.0.0', port=5001)

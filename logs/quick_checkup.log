@@ -7,4 +7,5 @@ WARNING: This is a development server. Do not use it in a production deployment.
 Press CTRL+C to quit
  * Restarting with watchdog (windowsapi)
  * Debugger is active!
- * Debugger PIN: 889-200-437
+ * Debugger PIN: 506-842-495
+127.0.0.1 - - [13/Nov/2024 14:38:38] "POST /quick-checkup HTTP/1.1" 200 -

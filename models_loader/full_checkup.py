@@ -1,13 +1,11 @@
 from flask import Flask, request, jsonify
 import requests
-import json
 import logging
 import time
 import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from functools import lru_cache
 
-# Initialize Flask app
+# Initialize Flask app  
 app = Flask(__name__)
 
 # Configure logging
@@ -56,11 +54,6 @@ def prepare_data_for_models(data):
 
     return stroke_data, heartd_data, diabetes_data
 
-# Caching API results based on input data to reduce redundant calls
-@lru_cache(maxsize=100)
-def cached_request_prediction(api_url, model_data):
-    return request_prediction(api_url, model_data)
-
 # Function to make a POST request to an API endpoint with retries
 def request_prediction(api_url, model_data, retries=3, delay=2):
     for i in range(retries):
@@ -92,7 +85,7 @@ def parallel_requests(url_data_pairs):
     return results
 
 # Main route to handle JSON input and route to each model
-@app.route('/predict', methods=['POST'])
+@app.route('/full-checkup', methods=['POST'])
 def predict():
     if request.is_json:
         data = request.get_json()
@@ -108,14 +101,28 @@ def predict():
         # Execute requests in parallel
         model_results = parallel_requests(url_data_pairs)
 
-        # Update combined_results to access the correct key
+        # Organize the response structure to be more readable and grouped by disease
         combined_results = {
-            'stroke_prediction': model_results[STROKE_API_URL].get('stroke_prediction') or model_results[STROKE_API_URL].get('error', 'Error with stroke model'),
-            'heart_disease_prediction': model_results[HEARTD_API_URL].get('prediction') or model_results[HEARTD_API_URL].get('error', 'Error with heart disease model'),
-            'diabetes_prediction': model_results[DIABETES_API_URL].get('prediction') or model_results[DIABETES_API_URL].get('error', 'Error with diabetes model')
+            'results': {
+                'Stroke': {
+                    'Prediksi': model_results[STROKE_API_URL].get('prediksi_stroke', 'Error with stroke model'),
+                    'Saran': model_results[STROKE_API_URL].get('saran_stroke', 'No advice available'),
+                    'Faktor Risiko': model_results[STROKE_API_URL].get('faktor_risiko_stroke', 'No risk factors identified')
+                },
+                'Heart Disease': {
+                    'Prediksi': model_results[HEARTD_API_URL].get('prediksi_heartd', 'Error with heart disease model'),
+                    'Saran': model_results[HEARTD_API_URL].get('saran_heartd', 'No advice available'),
+                    'Faktor Risiko': model_results[HEARTD_API_URL].get('faktor_risiko_heartd', 'No risk factors identified')
+                },
+                'Diabetes': {
+                    'Prediksi': model_results[DIABETES_API_URL].get('prediksi_diabetes', 'Error with diabetes model'),
+                    'Saran': model_results[DIABETES_API_URL].get('saran_diabetes', 'No advice available'),
+                    'Faktor Risiko': model_results[DIABETES_API_URL].get('faktor_risiko_diabetes', 'No risk factors identified')
+                }
+            }
         }
 
-        return jsonify(combined_results)
+        return jsonify(combined_results), 200
     else:
         return jsonify({"error": "Request must be JSON"}), 400
 
