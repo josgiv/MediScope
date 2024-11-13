@@ -1,5 +1,4 @@
-# fc_diabetes.py
-
+# Import necessary libraries
 import numpy as np
 import pandas as pd
 from flask import Flask, request, jsonify
@@ -8,63 +7,63 @@ import os
 import logging
 from sklearn.preprocessing import MinMaxScaler
 
-# Inisialisasi Flask app
+# Initialize Flask app
 app = Flask(__name__)
 
-# Konfigurasi logging
+# Setup logging
 log_dir = 'logs'
-os.makedirs(log_dir, exist_ok=True)  # Pastikan direktori logs tersedia
+os.makedirs(log_dir, exist_ok=True) 
 logging.basicConfig(filename=os.path.join(log_dir, 'fc_diabetes.log'),
                     level=logging.INFO,
                     format='[%(asctime)s] %(levelname)s: %(message)s')
 logger = logging.getLogger(__name__)
 
-logger.info("Memulai layanan fc_diabetes.")
-logger.info(f"Direktori kerja saat ini: {os.getcwd()}")
+logger.info("Starting fc_diabetes service.")
+logger.info(f"Current working directory: {os.getcwd()}")
 
-# Definisikan jalur absolut untuk model dan dataset
+# Define absolute paths for model and dataset
 MODEL_PATH = os.path.join(os.getcwd(), 'models', 'full_checkup', 'diabetes_models', 'svc_diabetes.joblib')
 DATASET_PATH = os.path.join(os.getcwd(), 'model-notebook', 'datasets', 'full_checkup', 'diabetes-dataset.csv')
 RISK_FACTORS_PATH = os.path.join(os.getcwd(), 'model-notebook', 'datasets', 'full_checkup', 'disease_riskFactors.csv')
 
-logger.info(f"Jalur model: {MODEL_PATH}")
-logger.info(f"Jalur dataset: {DATASET_PATH}")
-logger.info(f"Jalur faktor risiko: {RISK_FACTORS_PATH}")
+logger.info(f"Model path: {MODEL_PATH}")
+logger.info(f"Dataset path: {DATASET_PATH}")
+logger.info(f"Risk factors path: {RISK_FACTORS_PATH}")
 
-# Muat model yang telah dilatih (SVC) menggunakan joblib
+# Load trained model (SVC) using joblib
 try:
     model_diabetes = joblib.load(MODEL_PATH)
-    logger.info("Model berhasil dimuat.")
+    logger.info("Model successfully loaded.")
 except Exception as e:
-    logger.error(f"Kesalahan saat memuat model: {e}")
+    logger.error(f"Error loading model: {e}")
     raise
 
-# Muat dan proses dataset
+# Load and process dataset
 try:
     dataset_diabetes = pd.read_csv(DATASET_PATH)
-    logger.info("Dataset berhasil dimuat.")
+    logger.info("Dataset successfully loaded.")
 except Exception as e:
-    logger.error(f"Kesalahan saat memuat dataset: {e}")
+    logger.error(f"Error loading dataset: {e}")
     raise
 
-# Pilih fitur relevan dari dataset untuk skala
+# Select relevant features for scaling
 dataset_X_diabetes = dataset_diabetes.iloc[:, [1, 2, 5, 7]].values
 
-# Terapkan MinMax scaling
+# Apply MinMax scaling
 scaler_diabetes = MinMaxScaler(feature_range=(0, 1))
 dataset_scaled_diabetes = scaler_diabetes.fit_transform(dataset_X_diabetes)
-logger.info("Skala dataset selesai.")
+logger.info("Dataset scaling completed.")
 
 @app.route('/fc-diabetes', methods=['POST'])
 def predict_diabetes():
-    logger.info("Menerima permintaan prediksi.")
+    logger.info("Received prediction request.")
 
-    # Ambil input dari body permintaan JSON
+    # Get input from JSON request body
     data = request.get_json()
 
-    # Ekstrak nilai fitur dari data JSON
+    # Extract feature values from JSON data
     try:
-        # Pastikan data JSON berisi semua fitur yang diperlukan
+        # Make sure the JSON data contains all necessary features
         glucose_level = float(data['glucose'])
         blood_pressure_level = float(data['bloodpressure'])
         bmi_level = float(data['bmi'])
@@ -73,33 +72,33 @@ def predict_diabetes():
         input_features = [glucose_level, blood_pressure_level, bmi_level, age_value]
         features_final = [np.array(input_features)]
 
-        # Log fitur yang diterima
-        logger.info(f"Fitur input: {input_features}")
+        # Log received features
+        logger.info(f"Input features: {input_features}")
 
-        # Transformasi fitur menggunakan MinMaxScaler
+        # Transform features using MinMaxScaler
         scaled_features_diabetes = scaler_diabetes.transform(features_final)
 
-        # Prediksi menggunakan model
+        # Predict using the model
         prediction_diabetes = model_diabetes.predict(scaled_features_diabetes)
 
-        # Coba memuat data faktor risiko diabetes
+        # Try to load the diabetes risk factors data
         try:
             risk_factors_df = pd.read_csv(RISK_FACTORS_PATH, encoding='latin1')
-            logger.info("Data faktor risiko berhasil dimuat.")
+            logger.info("Risk factors data successfully loaded.")
         except Exception as e:
-            logger.error(f"Kesalahan saat memuat data faktor risiko: {e}")
-            return jsonify({'error': 'Gagal memuat data faktor risiko'}), 500
+            logger.error(f"Error loading risk factors data: {e}")
+            return jsonify({'error': 'Failed to load risk factors data'}), 500
 
-        # Cari informasi terkait diabetes
+        # Search for diabetes-related information
         diabetes_info = risk_factors_df[risk_factors_df['DNAME'] == 'Diabetes']
         if not diabetes_info.empty:
             precautions_diabetes = diabetes_info.iloc[0]['PRECAU']
             risk_factors_diabetes = diabetes_info.iloc[0]['RISKFAC']
         else:
-            precautions_diabetes = "Informasi pencegahan tidak tersedia."
-            risk_factors_diabetes = "Informasi faktor risiko tidak tersedia."
+            precautions_diabetes = "Prevention information is not available."
+            risk_factors_diabetes = "Risk factor information is not available."
 
-        # Interpretasi prediksi
+        # Interpret prediction
         if prediction_diabetes == 1:
             prediction_message_diabetes = "Anda berkemungkinan terkena Diabetes, harap konsultasikan dengan dokter."
             advice_message_diabetes = f"Anda dapat melakukan beberapa hal berikut untuk menurunkan risiko diabetes: {precautions_diabetes}"
@@ -109,10 +108,10 @@ def predict_diabetes():
             advice_message_diabetes = f"Anda tetap dapat melakukan hal ini untuk mencegah terkena diabetes: {precautions_diabetes}"
             risk_message_diabetes = f"Hal-hal yang menyebabkan dapat terkena diabetes: {risk_factors_diabetes}"
 
-        # Log hasil prediksi
-        logger.info(f"Hasil prediksi: {prediction_message_diabetes}")
+        # Log prediction result
+        logger.info(f"Prediction result: {prediction_message_diabetes}")
 
-        # Kembalikan prediksi sebagai respons JSON
+        # Return prediction as JSON response
         return jsonify({
             'prediksi_diabetes': prediction_message_diabetes,
             'saran_diabetes': advice_message_diabetes,
@@ -120,12 +119,12 @@ def predict_diabetes():
         })
 
     except KeyError as e:
-        logger.error(f"Kunci hilang dalam data input: {e}")
-        return jsonify({'error': f'Kunci hilang: {str(e)}'}), 400
+        logger.error(f"Missing key in input data: {e}")
+        return jsonify({'error': f'Missing key: {str(e)}'}), 400
     except ValueError as e:
-        logger.error(f"Nilai tidak valid dalam data input: {e}")
-        return jsonify({'error': f'Nilai tidak valid: {str(e)}'}), 400
+        logger.error(f"Invalid value in input data: {e}")
+        return jsonify({'error': f'Invalid value: {str(e)}'}), 400
 
 if __name__ == "__main__":
-    logger.info("Memulai Flask app.")
+    logger.info("Starting Flask app.")
     app.run(debug=True, host='0.0.0.0', port=5003)

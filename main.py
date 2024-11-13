@@ -2,17 +2,21 @@ import subprocess
 import sys
 import os
 import logging
-import json
+import multiprocessing
 
-# Logging setup for clearer and structured output
+# Set up logging for clear output
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s in %(message)s')
 logger = logging.getLogger(__name__)
 
 def run_flask_app(script, log_file):
-    # Menjalankan file Python dengan subprocess, output dialihkan ke log file
+    # Remove the log file if it exists before starting
+    if os.path.exists(log_file):
+        os.remove(log_file)
+    
+    # Run the Python script and redirect output to the log file
     with open(log_file, 'w') as file:
         process = subprocess.Popen([sys.executable, script], stdout=file, stderr=subprocess.STDOUT)
-    return process
+    process.wait() 
 
 def main():
     flask_apps = {
@@ -23,22 +27,24 @@ def main():
         "models_loader/quick_checkup.py": "logs/quick_checkup.log"
     }
 
-    processes = []
-
-    # Ensure the logs directory exists
+    # Ensure logs directory exists
     os.makedirs("logs", exist_ok=True)
 
+    # Prepare a list of processes
+    processes = []
+    
     for app, log_file in flask_apps.items():
         logger.info(f"Starting {app} with log output to {log_file}")
-        process = run_flask_app(app, log_file)
+        
+        # Run each Python script in a separate process using multiprocessing
+        process = multiprocessing.Process(target=run_flask_app, args=(app, log_file))
         processes.append(process)
+        process.start() 
 
     try:
-        # Menunggu semua proses berjalan
         for process in processes:
-            process.wait()
+            process.join()
     except KeyboardInterrupt:
-        # Menghentikan semua proses saat interupsi
         for process in processes:
             process.terminate()
         logger.info("Processes terminated by user.")

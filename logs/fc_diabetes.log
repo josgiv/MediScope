@@ -1,33 +1,90 @@
  * Serving Flask app 'fc_diabetes'
  * Debug mode: on
 etes.
-[2024-11-13 15:31:11,763] INFO: Direktori kerja saat ini: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
-[2024-11-13 15:31:11,763] INFO: Jalur model: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\diabetes_models\svc_diabetes.joblib
-[2024-11-13 15:31:11,763] INFO: Jalur dataset: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\diabetes-dataset.csv
-[2024-11-13 15:31:11,763] INFO: Jalur faktor risiko: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\disease_riskFactors.csv
-[2024-11-13 15:31:11,852] INFO: Model berhasil dimuat.
-[2024-11-13 15:31:11,857] INFO: Dataset berhasil dimuat.
-[2024-11-13 15:31:11,858] INFO: Skala dataset selesai.
-[2024-11-13 15:31:11,858] INFO: Memulai Flask app.
-[2024-11-13 15:31:11,884] INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+[2024-11-13 18:52:33,524] INFO: Direktori kerja saat ini: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
+[2024-11-13 18:52:33,525] INFO: Jalur model: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\diabetes_models\svc_diabetes.joblib
+[2024-11-13 18:52:33,525] INFO: Jalur dataset: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\diabetes-dataset.csv
+[2024-11-13 18:52:33,525] INFO: Jalur faktor risiko: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\disease_riskFactors.csv
+[2024-11-13 18:52:33,598] INFO: Model berhasil dimuat.
+[2024-11-13 18:52:33,602] INFO: Dataset berhasil dimuat.
+[2024-11-13 18:52:33,603] INFO: Skala dataset selesai.
+[2024-11-13 18:52:33,603] INFO: Memulai Flask app.
+[2024-11-13 18:52:33,628] INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5003
- * Running on http://192.168.80.121:5003
-[2024-11-13 15:31:11,884] INFO: [33mPress CTRL+C to quit[0m
-[2024-11-13 15:31:11,894] INFO:  * Restarting with watchdog (windowsapi)
-[2024-11-13 15:31:13,364] INFO: Memulai layanan fc_diabetes.
-[2024-11-13 15:31:13,364] INFO: Direktori kerja saat ini: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
-[2024-11-13 15:31:13,364] INFO: Jalur model: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\diabetes_models\svc_diabetes.joblib
-[2024-11-13 15:31:13,364] INFO: Jalur dataset: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\diabetes-dataset.csv
-[2024-11-13 15:31:13,364] INFO: Jalur faktor risiko: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\disease_riskFactors.csv
-[2024-11-13 15:31:13,446] INFO: Model berhasil dimuat.
-[2024-11-13 15:31:13,449] INFO: Dataset berhasil dimuat.
-[2024-11-13 15:31:13,450] INFO: Skala dataset selesai.
-[2024-11-13 15:31:13,450] INFO: Memulai Flask app.
-[2024-11-13 15:31:13,461] WARNING:  * Debugger is active!
-[2024-11-13 15:31:13,463] INFO:  * Debugger PIN: 506-842-495
-[2024-11-13 15:31:45,379] INFO: Menerima permintaan prediksi.
-[2024-11-13 15:31:45,380] INFO: Fitur input: [100.0, 299.0, 80.0, 19.0]
-[2024-11-13 15:31:45,386] INFO: Data faktor risiko berhasil dimuat.
-[2024-11-13 15:31:45,388] INFO: Hasil prediksi: Anda berkemungkinan terkena Diabetes, harap konsultasikan dengan dokter.
-[2024-11-13 15:31:45,389] INFO: 127.0.0.1 - - [13/Nov/2024 15:31:45] "POST /fc-diabetes HTTP/1.1" 200 -
+ * Running on http://192.156.1.3:5003
+[2024-11-13 18:52:33,628] INFO: [33mPress CTRL+C to quit[0m
+[2024-11-13 18:52:33,638] INFO:  * Restarting with watchdog (windowsapi)
+[2024-11-13 18:52:35,356] INFO: Memulai layanan fc_diabetes.
+[2024-11-13 18:52:35,357] INFO: Direktori kerja saat ini: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
+[2024-11-13 18:52:35,357] INFO: Jalur model: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\diabetes_models\svc_diabetes.joblib
+[2024-11-13 18:52:35,357] INFO: Jalur dataset: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\diabetes-dataset.csv
+[2024-11-13 18:52:35,357] INFO: Jalur faktor risiko: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\disease_riskFactors.csv
+[2024-11-13 18:52:35,463] INFO: Model berhasil dimuat.
+[2024-11-13 18:52:35,468] INFO: Dataset berhasil dimuat.
+[2024-11-13 18:52:35,470] INFO: Skala dataset selesai.
+[2024-11-13 18:52:35,470] INFO: Memulai Flask app.
+[2024-11-13 18:52:35,488] WARNING:  * Debugger is active!
+[2024-11-13 18:52:35,494] INFO:  * Debugger PIN: 111-482-787
+[2024-11-13 18:52:40,431] INFO: Menerima permintaan prediksi.
+[2024-11-13 18:52:40,431] INFO: Fitur input: [100.0, 299.0, 80.0, 19.0]
+[2024-11-13 18:52:40,436] INFO: Data faktor risiko berhasil dimuat.
+[2024-11-13 18:52:40,437] INFO: Hasil prediksi: Anda berkemungkinan terkena Diabetes, harap konsultasikan dengan dokter.
+[2024-11-13 18:52:40,437] INFO: 127.0.0.1 - - [13/Nov/2024 18:52:40] "POST /fc-diabetes HTTP/1.1" 200 -
+[2024-11-13 18:53:37,523] INFO: Menerima permintaan prediksi.
+[2024-11-13 18:53:37,524] INFO: Fitur input: [100.0, 299.0, 80.0, 19.0]
+[2024-11-13 18:53:37,526] INFO: Data faktor risiko berhasil dimuat.
+[2024-11-13 18:53:37,527] INFO: Hasil prediksi: Anda berkemungkinan terkena Diabetes, harap konsultasikan dengan dokter.
+[2024-11-13 18:53:37,527] INFO: 127.0.0.1 - - [13/Nov/2024 18:53:37] "POST /fc-diabetes HTTP/1.1" 200 -
+[2024-11-13 18:55:01,053] INFO:  * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_diabetes.py', reloading
+[2024-11-13 18:55:01,053] INFO:  * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_diabetes.py', reloading
+[2024-11-13 18:55:01,998] INFO:  * Restarting with watchdog (windowsapi)
+[2024-11-13 18:55:03,743] INFO: Memulai layanan fc_diabetes.
+[2024-11-13 18:55:03,743] INFO: Direktori kerja saat ini: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
+[2024-11-13 18:55:03,743] INFO: Jalur model: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\diabetes_models\svc_diabetes.joblib
+[2024-11-13 18:55:03,743] INFO: Jalur dataset: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\diabetes-dataset.csv
+[2024-11-13 18:55:03,743] INFO: Jalur faktor risiko: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\disease_riskFactors.csv
+[2024-11-13 18:55:03,834] INFO: Model berhasil dimuat.
+[2024-11-13 18:55:03,838] INFO: Dataset berhasil dimuat.
+[2024-11-13 18:55:03,840] INFO: Skala dataset selesai.
+[2024-11-13 18:55:03,840] INFO: Memulai Flask app.
+[2024-11-13 18:55:03,851] WARNING:  * Debugger is active!
+[2024-11-13 18:55:03,853] INFO:  * Debugger PIN: 111-482-787
+[2024-11-13 18:58:51,841] INFO:  * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_diabetes.py', reloading
+[2024-11-13 18:58:51,841] INFO:  * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_diabetes.py', reloading
+[2024-11-13 18:58:52,514] INFO:  * Restarting with watchdog (windowsapi)
+[2024-11-13 18:58:54,324] INFO: Starting fc_diabetes service.
+[2024-11-13 18:58:54,324] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
+[2024-11-13 18:58:54,324] INFO: Model path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\diabetes_models\svc_diabetes.joblib
+[2024-11-13 18:58:54,324] INFO: Dataset path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\diabetes-dataset.csv
+[2024-11-13 18:58:54,324] INFO: Risk factors path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\disease_riskFactors.csv
+[2024-11-13 18:58:54,434] INFO: Model successfully loaded.
+[2024-11-13 18:58:54,435] INFO: Dataset successfully loaded.
+[2024-11-13 18:58:54,437] INFO: Dataset scaling completed.
+[2024-11-13 18:58:54,437] INFO: Starting Flask app.
+[2024-11-13 18:58:54,451] WARNING:  * Debugger is active!
+[2024-11-13 18:58:54,454] INFO:  * Debugger PIN: 111-482-787
+[2024-11-13 18:58:55,591] INFO: Received prediction request.
+[2024-11-13 18:58:55,591] INFO: Input features: [40.5, 13.0, 10.0, 55.0]
+[2024-11-13 18:58:55,594] INFO: Risk factors data successfully loaded.
+[2024-11-13 18:58:55,594] INFO: Prediction result: Anda tidak berkemungkinan terkena Diabetes.
+[2024-11-13 18:58:55,595] INFO: 127.0.0.1 - - [13/Nov/2024 18:58:55] "POST /fc-diabetes HTTP/1.1" 200 -
+[2024-11-13 18:58:56,223] INFO: Received prediction request.
+[2024-11-13 18:58:56,224] INFO: Input features: [40.5, 13.0, 10.0, 55.0]
+[2024-11-13 18:58:56,225] INFO: Risk factors data successfully loaded.
+[2024-11-13 18:58:56,226] INFO: Prediction result: Anda tidak berkemungkinan terkena Diabetes.
+[2024-11-13 18:58:56,226] INFO: 127.0.0.1 - - [13/Nov/2024 18:58:56] "POST /fc-diabetes HTTP/1.1" 200 -
+[2024-11-13 18:59:09,895] INFO:  * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_stroke.py', reloading
+[2024-11-13 18:59:09,895] INFO:  * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_stroke.py', reloading
+[2024-11-13 18:59:10,696] INFO:  * Restarting with watchdog (windowsapi)
+[2024-11-13 18:59:12,612] INFO: Starting fc_diabetes service.
+[2024-11-13 18:59:12,612] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
+[2024-11-13 18:59:12,613] INFO: Model path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\diabetes_models\svc_diabetes.joblib
+[2024-11-13 18:59:12,613] INFO: Dataset path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\diabetes-dataset.csv
+[2024-11-13 18:59:12,613] INFO: Risk factors path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\disease_riskFactors.csv
+[2024-11-13 18:59:12,708] INFO: Model successfully loaded.
+[2024-11-13 18:59:12,711] INFO: Dataset successfully loaded.
+[2024-11-13 18:59:12,712] INFO: Dataset scaling completed.
+[2024-11-13 18:59:12,712] INFO: Starting Flask app.
+[2024-11-13 18:59:12,724] WARNING:  * Debugger is active!
+[2024-11-13 18:59:12,727] INFO:  * Debugger PIN: 111-482-787

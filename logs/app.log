@@ -1,0 +1,11 @@
+[2024-11-13 18:49:51,282] INFO in Starting fc_diabetes.py at 2024-11-13 18:49:51
+[2024-11-13 18:49:51,283] INFO in Memulai fc_diabetes.py pada 2024-11-13 18:49:51
+[2024-11-13 18:49:51,287] INFO in Starting fc_heartd.py at 2024-11-13 18:49:51
+[2024-11-13 18:49:51,287] INFO in Memulai fc_heartd.py pada 2024-11-13 18:49:51
+[2024-11-13 18:49:51,293] INFO in Starting fc_stroke.py at 2024-11-13 18:49:51
+[2024-11-13 18:49:51,293] INFO in Memulai fc_stroke.py pada 2024-11-13 18:49:51
+[2024-11-13 18:49:51,300] INFO in Starting full_checkup.py at 2024-11-13 18:49:51
+[2024-11-13 18:49:51,300] INFO in Memulai full_checkup.py pada 2024-11-13 18:49:51
+[2024-11-13 18:49:51,307] INFO in Starting quick_checkup.py at 2024-11-13 18:49:51
+[2024-11-13 18:49:51,307] INFO in Memulai quick_checkup.py pada 2024-11-13 18:49:51
+[2024-11-13 18:50:58,449] INFO in Processes terminated by user.
