@@ -3,6 +3,7 @@ import sys
 import os
 import logging
 import multiprocessing
+import platform
 
 # Set up logging for clear output
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s in %(message)s')
@@ -12,11 +13,17 @@ def run_flask_app(script, log_file):
     # Remove the log file if it exists before starting
     if os.path.exists(log_file):
         os.remove(log_file)
+
+    # Configure Popen based on OS
+    if platform.system() == 'Windows':
+        # Windows typically requires `shell=True` for Popen
+        with open(log_file, 'w') as file:
+            process = subprocess.Popen([sys.executable, script], stdout=file, stderr=subprocess.STDOUT, shell=True)
+    else:
+        with open(log_file, 'w') as file:
+            process = subprocess.Popen([sys.executable, script], stdout=file, stderr=subprocess.STDOUT)
     
-    # Run the Python script and redirect output to the log file
-    with open(log_file, 'w') as file:
-        process = subprocess.Popen([sys.executable, script], stdout=file, stderr=subprocess.STDOUT)
-    process.wait() 
+    process.wait()
 
 def main():
     flask_apps = {
@@ -32,14 +39,14 @@ def main():
 
     # Prepare a list of processes
     processes = []
-    
+
     for app, log_file in flask_apps.items():
         logger.info(f"Starting {app} with log output to {log_file}")
-        
+
         # Run each Python script in a separate process using multiprocessing
         process = multiprocessing.Process(target=run_flask_app, args=(app, log_file))
         processes.append(process)
-        process.start() 
+        process.start()
 
     try:
         for process in processes:

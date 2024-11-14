@@ -6,3 +6,4 @@ seaborn
 flask
 joblib
 plotly
+requests
