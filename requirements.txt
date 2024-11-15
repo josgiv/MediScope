@@ -7,3 +7,4 @@ flask
 joblib
 plotly
 requests
+flask-cors
