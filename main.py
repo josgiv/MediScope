@@ -4,19 +4,34 @@ import os
 import logging
 import multiprocessing
 import platform
+from flask_cors import CORS  # Tambahan untuk Flask CORS
 
 # Set up logging for clear output
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s in %(message)s')
 logger = logging.getLogger(__name__)
 
 def run_flask_app(script, log_file):
-    """Run Flask app in background with logging."""
+    """Run Flask app in background with logging and CORS injection."""
     # Remove the log file if it exists before starting
     if os.path.exists(log_file):
         os.remove(log_file)
 
-    # Configure Popen based on OS
     logger.info(f"Starting Flask app {script} with log output to {log_file}")
+    with open(script, 'r') as f:
+        code = f.read()
+        if 'from flask import Flask' in code:
+            # Tambahkan CORS jika belum diimplementasikan
+            if 'from flask_cors import CORS' not in code:
+                logger.info(f"Injecting Flask-CORS into {script}")
+                cors_injection = "\nfrom flask_cors import CORS\napp = Flask(__name__)\nCORS(app)\n"
+                code = code.replace("app = Flask(__name__)", cors_injection)
+
+            temp_script = f"{script}.temp"
+            with open(temp_script, 'w') as temp:
+                temp.write(code)
+            script = temp_script
+
+    # Configure Popen based on OS
     if platform.system() == 'Windows':
         with open(log_file, 'w') as file:
             process = subprocess.Popen([sys.executable, script], stdout=file, stderr=subprocess.STDOUT, shell=True)
@@ -25,6 +40,10 @@ def run_flask_app(script, log_file):
             process = subprocess.Popen([sys.executable, script], stdout=file, stderr=subprocess.STDOUT)
     
     process.wait()
+
+    # Clean up temporary script
+    if script.endswith('.temp'):
+        os.remove(script)
 
 def install_next_if_needed():
     """Check if Next.js is installed, if not, install it."""

@@ -6,9 +6,12 @@ import os
 import pandas as pd
 import logging
 from joblib import load
+from flask_cors import CORS 
 
-# Initialize Flask app
 app = Flask(__name__)
+
+# Enable CORS for the app
+CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 
 # Set up logging
 log_dir = 'logs'

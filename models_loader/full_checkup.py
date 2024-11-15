@@ -4,9 +4,13 @@ import logging
 import time
 import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from flask_cors import CORS 
 
-# Initialize Flask app  
 app = Flask(__name__)
+
+# Enable CORS for the app
+CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)

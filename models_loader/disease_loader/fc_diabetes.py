@@ -6,9 +6,12 @@ import joblib
 import os
 import logging
 from sklearn.preprocessing import MinMaxScaler
+from flask_cors import CORS 
 
-# Initialize Flask app
 app = Flask(__name__)
+
+# Enable CORS for the app
+CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 
 # Setup logging
 log_dir = 'logs'

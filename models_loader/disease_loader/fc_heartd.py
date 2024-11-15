@@ -5,9 +5,13 @@ import joblib
 import numpy as np
 import pandas as pd
 from flask import Flask, request, jsonify
+from flask_cors import CORS 
 
-# Define the Flask application
 app = Flask(__name__)
+
+# Enable CORS for the app
+CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+
 
 # Define the absolute path for the model and risk factors file
 MODEL_PATH = os.path.join(os.getcwd(), 'models', 'full_checkup', 'heartd_models', 'heartD_model.joblib')
