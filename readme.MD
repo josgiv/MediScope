@@ -21,9 +21,10 @@ The system consists of three models running on separate Flask APIs, each serving
 1. **Stroke Model**: Hosted on `http://localhost:5001/fc-stroke`
 2. **Heart Disease Model**: Hosted on `http://localhost:5002/fc-heartd`
 3. **Diabetes Model**: Hosted on `http://localhost:5003/fc-diabetes`
+3. **Quick Checkup**: Hosted on `http://localhost:5010/quick-checkup`
 
 ### Main API
-The main Flask app, hosted on `http://localhost:5000/predict`, communicates with these three models and aggregates the results.
+The main Flask app, hosted on `http://localhost:5000/full-checkup`, communicates with these three models and aggregates the results.
 
 ## Requirements
 - Python 3.7 or higher
