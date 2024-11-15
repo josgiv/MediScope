@@ -1,50 +1,18 @@
  * Serving Flask app 'fc_stroke'
  * Debug mode: on
-rvice.
-[2024-11-13 20:22:00,456] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
-[2024-11-13 20:22:04,487] INFO: Model loaded successfully from E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\stroke_model.joblib
-[2024-11-13 20:22:04,487] INFO: Starting Flask app for Stroke prediction.
-[2024-11-13 20:22:04,516] INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+^Cice.
+[2024-11-15 14:23:36,150] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
+[2024-11-15 14:23:37,417] INFO: Model loaded successfully from E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\stroke_model.joblib
+[2024-11-15 14:23:37,418] INFO: Starting Flask app for Stroke prediction.
+[2024-11-15 14:23:37,455] INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5001
- * Running on http://192.156.1.3:5001
-[2024-11-13 20:22:04,516] INFO: [33mPress CTRL+C to quit[0m
-[2024-11-13 20:22:04,517] INFO:  * Restarting with stat
-[2024-11-13 20:22:05,570] INFO: Starting fc_stroke service.
-[2024-11-13 20:22:05,570] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
-[2024-11-13 20:22:06,511] INFO: Model loaded successfully from E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\stroke_model.joblib
-[2024-11-13 20:22:06,512] INFO: Starting Flask app for Stroke prediction.
-[2024-11-13 20:22:06,519] WARNING:  * Debugger is active!
-[2024-11-13 20:22:06,522] INFO:  * Debugger PIN: 114-027-594
-[2024-11-13 20:22:06,568] INFO: Received a stroke prediction request.
-[2024-11-13 20:22:06,582] INFO: Risk factors data loaded successfully.
-[2024-11-13 20:22:06,585] INFO: Prediction result: Anda tidak berkemungkinan terkena Stroke.
-[2024-11-13 20:22:06,587] INFO: 127.0.0.1 - - [13/Nov/2024 20:22:06] "POST /fc-stroke HTTP/1.1" 200 -
-[2024-11-13 20:23:35,093] INFO: Received a stroke prediction request.
-[2024-11-13 20:23:35,096] INFO: Risk factors data loaded successfully.
-[2024-11-13 20:23:35,097] INFO: Prediction result: Anda tidak berkemungkinan terkena Stroke.
-[2024-11-13 20:23:35,098] INFO: 127.0.0.1 - - [13/Nov/2024 20:23:35] "POST /fc-stroke HTTP/1.1" 200 -
-[2024-11-13 20:25:42,393] INFO: Received a stroke prediction request.
-[2024-11-13 20:25:42,396] INFO: Risk factors data loaded successfully.
-[2024-11-13 20:25:42,397] INFO: Prediction result: Anda tidak berkemungkinan terkena Stroke.
-[2024-11-13 20:25:42,397] INFO: 127.0.0.1 - - [13/Nov/2024 20:25:42] "POST /fc-stroke HTTP/1.1" 200 -
-[2024-11-13 20:25:43,248] INFO: Received a stroke prediction request.
-[2024-11-13 20:25:43,251] INFO: Risk factors data loaded successfully.
-[2024-11-13 20:25:43,252] INFO: Prediction result: Anda tidak berkemungkinan terkena Stroke.
-[2024-11-13 20:25:43,252] INFO: 127.0.0.1 - - [13/Nov/2024 20:25:43] "POST /fc-stroke HTTP/1.1" 200 -
-[2024-11-13 20:25:43,728] INFO: Received a stroke prediction request.
-[2024-11-13 20:25:43,730] INFO: Risk factors data loaded successfully.
-[2024-11-13 20:25:43,731] INFO: Prediction result: Anda tidak berkemungkinan terkena Stroke.
-[2024-11-13 20:25:43,731] INFO: 127.0.0.1 - - [13/Nov/2024 20:25:43] "POST /fc-stroke HTTP/1.1" 200 -
-[2024-11-13 20:25:45,383] INFO: Received a stroke prediction request.
-[2024-11-13 20:25:45,385] INFO: Risk factors data loaded successfully.
-[2024-11-13 20:25:45,387] INFO: Prediction result: Anda tidak berkemungkinan terkena Stroke.
-[2024-11-13 20:25:45,388] INFO: 127.0.0.1 - - [13/Nov/2024 20:25:45] "POST /fc-stroke HTTP/1.1" 200 -
-[2024-11-13 20:25:47,476] INFO: Received a stroke prediction request.
-[2024-11-13 20:25:47,478] INFO: Risk factors data loaded successfully.
-[2024-11-13 20:25:47,478] INFO: Prediction result: Anda tidak berkemungkinan terkena Stroke.
-[2024-11-13 20:25:47,480] INFO: 127.0.0.1 - - [13/Nov/2024 20:25:47] "POST /fc-stroke HTTP/1.1" 200 -
-[2024-11-13 20:30:02,934] INFO: Received a stroke prediction request.
-[2024-11-13 20:30:02,936] INFO: Risk factors data loaded successfully.
-[2024-11-13 20:30:02,937] INFO: Prediction result: Anda tidak berkemungkinan terkena Stroke.
-[2024-11-13 20:30:02,938] INFO: 127.0.0.1 - - [13/Nov/2024 20:30:02] "POST /fc-stroke HTTP/1.1" 200 -
+ * Running on http://10.234.17.48:5001
+[2024-11-15 14:23:37,456] INFO: [33mPress CTRL+C to quit[0m
+[2024-11-15 14:23:37,472] INFO:  * Restarting with watchdog (windowsapi)
+[2024-11-15 14:23:38,827] INFO: Starting fc_stroke service.
+[2024-11-15 14:23:38,827] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
+[2024-11-15 14:23:39,927] INFO: Model loaded successfully from E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\stroke_model.joblib
+[2024-11-15 14:23:39,928] INFO: Starting Flask app for Stroke prediction.
+[2024-11-15 14:23:39,946] WARNING:  * Debugger is active!
+[2024-11-15 14:23:39,949] INFO:  * Debugger PIN: 506-842-495
