@@ -1,111 +1,28 @@
- * Serving Flask app 'fc_diabetes'
+ * Serving Flask app 'fc_diabetes.py'
  * Debug mode: on
-^Cice.
-[2024-11-15 17:26:48,481] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
-[2024-11-15 17:26:48,481] INFO: Model path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\diabetes_models\svc_diabetes.joblib
-[2024-11-15 17:26:48,481] INFO: Dataset path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\diabetes-dataset.csv
-[2024-11-15 17:26:48,481] INFO: Risk factors path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\disease_riskFactors.csv
-[2024-11-15 17:26:48,958] INFO: Model successfully loaded.
-[2024-11-15 17:26:48,971] INFO: Dataset successfully loaded.
-[2024-11-15 17:26:48,972] INFO: Dataset scaling completed.
-[2024-11-15 17:26:48,972] INFO: Starting Flask app.
-[2024-11-15 17:26:48,994] INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+^C.
+[2024-11-16 12:22:39,322] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
+[2024-11-16 12:22:39,322] INFO: Model path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\diabetes_models\svc_diabetes.joblib
+[2024-11-16 12:22:39,322] INFO: Dataset path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\diabetes-dataset.csv
+[2024-11-16 12:22:39,322] INFO: Risk factors path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\disease_riskFactors.csv
+[2024-11-16 12:22:39,540] INFO: Model successfully loaded.
+[2024-11-16 12:22:39,547] INFO: Dataset successfully loaded.
+[2024-11-16 12:22:39,551] INFO: Dataset scaling completed.
+[2024-11-16 12:22:39,553] INFO: Starting Flask app.
+[2024-11-16 12:22:44,126] INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5003
- * Running on http://192.168.80.121:5003
-[2024-11-15 17:26:48,994] INFO: [33mPress CTRL+C to quit[0m
-[2024-11-15 17:26:49,004] INFO:  * Restarting with watchdog (windowsapi)
-[2024-11-15 17:26:50,577] INFO: Starting fc_diabetes service.
-[2024-11-15 17:26:50,578] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
-[2024-11-15 17:26:50,578] INFO: Model path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\diabetes_models\svc_diabetes.joblib
-[2024-11-15 17:26:50,578] INFO: Dataset path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\diabetes-dataset.csv
-[2024-11-15 17:26:50,578] INFO: Risk factors path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\disease_riskFactors.csv
-[2024-11-15 17:26:50,664] INFO: Model successfully loaded.
-[2024-11-15 17:26:50,667] INFO: Dataset successfully loaded.
-[2024-11-15 17:26:50,668] INFO: Dataset scaling completed.
-[2024-11-15 17:26:50,668] INFO: Starting Flask app.
-[2024-11-15 17:26:50,683] WARNING:  * Debugger is active!
-[2024-11-15 17:26:50,688] INFO:  * Debugger PIN: 506-842-495
-[2024-11-15 17:28:34,444] INFO:  * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\__init__.py', reloading
-[2024-11-15 17:28:34,445] INFO:  * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\__init__.py', reloading
-[2024-11-15 17:28:34,446] INFO:  * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\core.py', reloading
-[2024-11-15 17:28:34,447] INFO:  * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\core.py', reloading
-[2024-11-15 17:28:34,448] INFO:  * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\decorator.py', reloading
-[2024-11-15 17:28:34,448] INFO:  * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\decorator.py', reloading
-[2024-11-15 17:28:34,449] INFO:  * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\extension.py', reloading
-[2024-11-15 17:28:34,450] INFO:  * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\extension.py', reloading
-[2024-11-15 17:28:34,450] INFO:  * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\extension.py', reloading
-[2024-11-15 17:28:34,451] INFO:  * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\version.py', reloading
-[2024-11-15 17:28:34,452] INFO:  * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\version.py', reloading
-[2024-11-15 17:28:35,216] INFO:  * Restarting with watchdog (windowsapi)
-[2024-11-15 17:28:37,575] INFO: Starting fc_diabetes service.
-[2024-11-15 17:28:37,576] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
-[2024-11-15 17:28:37,576] INFO: Model path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\diabetes_models\svc_diabetes.joblib
-[2024-11-15 17:28:37,576] INFO: Dataset path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\diabetes-dataset.csv
-[2024-11-15 17:28:37,576] INFO: Risk factors path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\disease_riskFactors.csv
-[2024-11-15 17:28:37,685] INFO: Model successfully loaded.
-[2024-11-15 17:28:37,688] INFO: Dataset successfully loaded.
-[2024-11-15 17:28:37,690] INFO: Dataset scaling completed.
-[2024-11-15 17:28:37,691] INFO: Starting Flask app.
-[2024-11-15 17:28:37,708] WARNING:  * Debugger is active!
-[2024-11-15 17:28:37,712] INFO:  * Debugger PIN: 506-842-495
-[2024-11-15 17:35:22,404] INFO:  * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_stroke.py', reloading
-[2024-11-15 17:35:22,405] INFO:  * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_stroke.py', reloading
-[2024-11-15 17:35:22,406] INFO:  * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_stroke.py', reloading
-[2024-11-15 17:35:22,714] INFO:  * Restarting with watchdog (windowsapi)
-[2024-11-15 17:35:25,158] INFO: Starting fc_diabetes service.
-[2024-11-15 17:35:25,158] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
-[2024-11-15 17:35:25,158] INFO: Model path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\diabetes_models\svc_diabetes.joblib
-[2024-11-15 17:35:25,158] INFO: Dataset path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\diabetes-dataset.csv
-[2024-11-15 17:35:25,158] INFO: Risk factors path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\disease_riskFactors.csv
-[2024-11-15 17:35:25,260] INFO: Model successfully loaded.
-[2024-11-15 17:35:25,275] INFO: Dataset successfully loaded.
-[2024-11-15 17:35:25,277] INFO: Dataset scaling completed.
-[2024-11-15 17:35:25,278] INFO: Starting Flask app.
-[2024-11-15 17:35:25,292] WARNING:  * Debugger is active!
-[2024-11-15 17:35:25,296] INFO:  * Debugger PIN: 506-842-495
-[2024-11-15 17:35:27,641] INFO:  * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_heartd.py', reloading
-[2024-11-15 17:35:27,642] INFO:  * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_heartd.py', reloading
-[2024-11-15 17:35:27,642] INFO:  * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_heartd.py', reloading
-[2024-11-15 17:35:28,508] INFO:  * Restarting with watchdog (windowsapi)
-[2024-11-15 17:35:30,544] INFO: Starting fc_diabetes service.
-[2024-11-15 17:35:30,544] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
-[2024-11-15 17:35:30,545] INFO: Model path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\diabetes_models\svc_diabetes.joblib
-[2024-11-15 17:35:30,545] INFO: Dataset path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\diabetes-dataset.csv
-[2024-11-15 17:35:30,545] INFO: Risk factors path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\disease_riskFactors.csv
-[2024-11-15 17:35:30,636] INFO: Model successfully loaded.
-[2024-11-15 17:35:30,639] INFO: Dataset successfully loaded.
-[2024-11-15 17:35:30,641] INFO: Dataset scaling completed.
-[2024-11-15 17:35:30,641] INFO: Starting Flask app.
-[2024-11-15 17:35:30,655] WARNING:  * Debugger is active!
-[2024-11-15 17:35:30,657] INFO:  * Debugger PIN: 506-842-495
-[2024-11-15 17:35:31,425] INFO:  * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_diabetes.py', reloading
-[2024-11-15 17:35:31,426] INFO:  * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_diabetes.py', reloading
-[2024-11-15 17:35:31,426] INFO:  * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_diabetes.py', reloading
-[2024-11-15 17:35:31,859] INFO:  * Restarting with watchdog (windowsapi)
-[2024-11-15 17:35:33,671] INFO: Starting fc_diabetes service.
-[2024-11-15 17:35:33,671] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
-[2024-11-15 17:35:33,671] INFO: Model path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\diabetes_models\svc_diabetes.joblib
-[2024-11-15 17:35:33,673] INFO: Dataset path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\diabetes-dataset.csv
-[2024-11-15 17:35:33,673] INFO: Risk factors path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\disease_riskFactors.csv
-[2024-11-15 17:35:33,775] INFO: Model successfully loaded.
-[2024-11-15 17:35:33,779] INFO: Dataset successfully loaded.
-[2024-11-15 17:35:33,780] INFO: Dataset scaling completed.
-[2024-11-15 17:35:33,780] INFO: Starting Flask app.
-[2024-11-15 17:35:33,795] WARNING:  * Debugger is active!
-[2024-11-15 17:35:33,798] INFO:  * Debugger PIN: 506-842-495
-[2024-11-15 17:35:37,470] INFO:  * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_diabetes.py', reloading
-[2024-11-15 17:35:37,470] INFO:  * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_diabetes.py', reloading
-[2024-11-15 17:35:37,471] INFO:  * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_diabetes.py', reloading
-[2024-11-15 17:35:38,021] INFO:  * Restarting with watchdog (windowsapi)
-[2024-11-15 17:35:39,728] INFO: Starting fc_diabetes service.
-[2024-11-15 17:35:39,729] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
-[2024-11-15 17:35:39,729] INFO: Model path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\diabetes_models\svc_diabetes.joblib
-[2024-11-15 17:35:39,729] INFO: Dataset path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\diabetes-dataset.csv
-[2024-11-15 17:35:39,729] INFO: Risk factors path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\disease_riskFactors.csv
-[2024-11-15 17:35:39,802] INFO: Model successfully loaded.
-[2024-11-15 17:35:39,805] INFO: Dataset successfully loaded.
-[2024-11-15 17:35:39,806] INFO: Dataset scaling completed.
-[2024-11-15 17:35:39,807] INFO: Starting Flask app.
-[2024-11-15 17:35:39,819] WARNING:  * Debugger is active!
-[2024-11-15 17:35:39,821] INFO:  * Debugger PIN: 506-842-495
+ * Running on http://10.234.12.241:5003
+[2024-11-16 12:22:44,126] INFO: [33mPress CTRL+C to quit[0m
+[2024-11-16 12:22:44,145] INFO:  * Restarting with watchdog (windowsapi)
+[2024-11-16 12:22:46,955] INFO: Starting fc_diabetes service.
+[2024-11-16 12:22:46,955] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
+[2024-11-16 12:22:46,955] INFO: Model path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\diabetes_models\svc_diabetes.joblib
+[2024-11-16 12:22:46,955] INFO: Dataset path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\diabetes-dataset.csv
+[2024-11-16 12:22:46,955] INFO: Risk factors path: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\model-notebook\datasets\full_checkup\disease_riskFactors.csv
+[2024-11-16 12:22:47,131] INFO: Model successfully loaded.
+[2024-11-16 12:22:47,138] INFO: Dataset successfully loaded.
+[2024-11-16 12:22:47,139] INFO: Dataset scaling completed.
+[2024-11-16 12:22:47,140] INFO: Starting Flask app.
+[2024-11-16 12:22:47,166] WARNING:  * Debugger is active!
+[2024-11-16 12:22:47,173] INFO:  * Debugger PIN: 506-842-495

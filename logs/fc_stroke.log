@@ -1,73 +1,18 @@
- * Serving Flask app 'fc_stroke'
+ * Serving Flask app 'fc_stroke.py'
  * Debug mode: on
-^Cice.
-[2024-11-15 17:26:45,944] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
-[2024-11-15 17:26:48,956] INFO: Model loaded successfully from E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\stroke_model.joblib
-[2024-11-15 17:26:48,956] INFO: Starting Flask app for Stroke prediction.
-[2024-11-15 17:26:48,979] INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+^C.
+[2024-11-16 12:22:37,359] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
+[2024-11-16 12:22:39,547] INFO: Model loaded successfully from E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\stroke_model.joblib
+[2024-11-16 12:22:39,550] INFO: Starting Flask app for Stroke prediction.
+[2024-11-16 12:22:44,127] INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5001
- * Running on http://192.168.80.121:5001
-[2024-11-15 17:26:48,979] INFO: [33mPress CTRL+C to quit[0m
-[2024-11-15 17:26:48,989] INFO:  * Restarting with watchdog (windowsapi)
-[2024-11-15 17:26:49,866] INFO: Starting fc_stroke service.
-[2024-11-15 17:26:49,866] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
-[2024-11-15 17:26:50,654] INFO: Model loaded successfully from E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\stroke_model.joblib
-[2024-11-15 17:26:50,654] INFO: Starting Flask app for Stroke prediction.
-[2024-11-15 17:26:50,666] WARNING:  * Debugger is active!
-[2024-11-15 17:26:50,668] INFO:  * Debugger PIN: 506-842-495
-[2024-11-15 17:28:34,444] INFO:  * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\__init__.py', reloading
-[2024-11-15 17:28:34,445] INFO:  * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\__init__.py', reloading
-[2024-11-15 17:28:34,446] INFO:  * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\core.py', reloading
-[2024-11-15 17:28:34,446] INFO:  * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\core.py', reloading
-[2024-11-15 17:28:34,447] INFO:  * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\decorator.py', reloading
-[2024-11-15 17:28:34,448] INFO:  * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\decorator.py', reloading
-[2024-11-15 17:28:34,449] INFO:  * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\extension.py', reloading
-[2024-11-15 17:28:34,450] INFO:  * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\extension.py', reloading
-[2024-11-15 17:28:34,450] INFO:  * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\version.py', reloading
-[2024-11-15 17:28:34,452] INFO:  * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\version.py', reloading
-[2024-11-15 17:28:35,207] INFO:  * Restarting with watchdog (windowsapi)
-[2024-11-15 17:28:36,611] INFO: Starting fc_stroke service.
-[2024-11-15 17:28:36,611] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
-[2024-11-15 17:28:37,690] INFO: Model loaded successfully from E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\stroke_model.joblib
-[2024-11-15 17:28:37,691] INFO: Starting Flask app for Stroke prediction.
-[2024-11-15 17:28:37,707] WARNING:  * Debugger is active!
-[2024-11-15 17:28:37,711] INFO:  * Debugger PIN: 506-842-495
-[2024-11-15 17:35:22,404] INFO:  * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_stroke.py', reloading
-[2024-11-15 17:35:22,405] INFO:  * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_stroke.py', reloading
-[2024-11-15 17:35:22,715] INFO:  * Restarting with watchdog (windowsapi)
-[2024-11-15 17:35:24,170] INFO: Starting fc_stroke service.
-[2024-11-15 17:35:24,171] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
-[2024-11-15 17:35:25,296] INFO: Model loaded successfully from E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\stroke_model.joblib
-[2024-11-15 17:35:25,297] INFO: Starting Flask app for Stroke prediction.
-[2024-11-15 17:35:25,314] WARNING:  * Debugger is active!
-[2024-11-15 17:35:25,317] INFO:  * Debugger PIN: 506-842-495
-[2024-11-15 17:35:27,641] INFO:  * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_heartd.py', reloading
-[2024-11-15 17:35:27,642] INFO:  * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_heartd.py', reloading
-[2024-11-15 17:35:27,642] INFO:  * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_heartd.py', reloading
-[2024-11-15 17:35:28,530] INFO:  * Restarting with watchdog (windowsapi)
-[2024-11-15 17:35:29,725] INFO: Starting fc_stroke service.
-[2024-11-15 17:35:29,725] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
-[2024-11-15 17:35:30,659] INFO: Model loaded successfully from E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\stroke_model.joblib
-[2024-11-15 17:35:30,659] INFO: Starting Flask app for Stroke prediction.
-[2024-11-15 17:35:30,672] WARNING:  * Debugger is active!
-[2024-11-15 17:35:30,677] INFO:  * Debugger PIN: 506-842-495
-[2024-11-15 17:35:31,426] INFO:  * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_diabetes.py', reloading
-[2024-11-15 17:35:31,426] INFO:  * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_diabetes.py', reloading
-[2024-11-15 17:35:31,887] INFO:  * Restarting with watchdog (windowsapi)
-[2024-11-15 17:35:32,893] INFO: Starting fc_stroke service.
-[2024-11-15 17:35:32,894] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
-[2024-11-15 17:35:33,826] INFO: Model loaded successfully from E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\stroke_model.joblib
-[2024-11-15 17:35:33,827] INFO: Starting Flask app for Stroke prediction.
-[2024-11-15 17:35:33,842] WARNING:  * Debugger is active!
-[2024-11-15 17:35:33,847] INFO:  * Debugger PIN: 506-842-495
-[2024-11-15 17:35:37,469] INFO:  * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_diabetes.py', reloading
-[2024-11-15 17:35:37,470] INFO:  * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_diabetes.py', reloading
-[2024-11-15 17:35:37,470] INFO:  * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_diabetes.py', reloading
-[2024-11-15 17:35:38,061] INFO:  * Restarting with watchdog (windowsapi)
-[2024-11-15 17:35:39,033] INFO: Starting fc_stroke service.
-[2024-11-15 17:35:39,033] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
-[2024-11-15 17:35:39,831] INFO: Model loaded successfully from E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\stroke_model.joblib
-[2024-11-15 17:35:39,831] INFO: Starting Flask app for Stroke prediction.
-[2024-11-15 17:35:39,843] WARNING:  * Debugger is active!
-[2024-11-15 17:35:39,845] INFO:  * Debugger PIN: 506-842-495
+ * Running on http://10.234.12.241:5001
+[2024-11-16 12:22:44,127] INFO: [33mPress CTRL+C to quit[0m
+[2024-11-16 12:22:44,145] INFO:  * Restarting with watchdog (windowsapi)
+[2024-11-16 12:22:45,580] INFO: Starting fc_stroke service.
+[2024-11-16 12:22:45,581] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
+[2024-11-16 12:22:47,190] INFO: Model loaded successfully from E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\stroke_model.joblib
+[2024-11-16 12:22:47,191] INFO: Starting Flask app for Stroke prediction.
+[2024-11-16 12:22:47,221] WARNING:  * Debugger is active!
+[2024-11-16 12:22:47,228] INFO:  * Debugger PIN: 506-842-495

@@ -1,60 +1,12 @@
 Current working directory:  E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
 Model loaded from:  E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\heartd_models\heartD_model.joblib
- * Serving Flask app 'fc_heartd'
+ * Serving Flask app 'fc_heartd.py'
  * Debug mode: on
 WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5002
- * Running on http://192.168.80.121:5002
+ * Running on http://10.234.12.241:5002
 Press CTRL+C to quit
- * Restarting with watchdog (windowsapi)
- * Debugger is active!
- * Debugger PIN: 506-842-495
- * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\__init__.py', reloading
- * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\__init__.py', reloading
- * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\core.py', reloading
- * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\core.py', reloading
- * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\decorator.py', reloading
- * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\decorator.py', reloading
- * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\extension.py', reloading
- * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\extension.py', reloading
- * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\extension.py', reloading
- * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\version.py', reloading
- * Detected change in 'C:\\Users\\Josia Given S\\.pyenv\\pyenv-win\\versions\\3.12.7\\Lib\\site-packages\\flask_cors\\version.py', reloading
-Current working directory:  E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
-Model loaded from:  E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\heartd_models\heartD_model.joblib
- * Restarting with watchdog (windowsapi)
- * Debugger is active!
- * Debugger PIN: 506-842-495
- * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_stroke.py', reloading
- * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_stroke.py', reloading
- * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_stroke.py', reloading
-Current working directory:  E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
-Model loaded from:  E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\heartd_models\heartD_model.joblib
- * Restarting with watchdog (windowsapi)
- * Debugger is active!
- * Debugger PIN: 506-842-495
- * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_heartd.py', reloading
- * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_heartd.py', reloading
- * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_heartd.py', reloading
-Current working directory:  E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
-Model loaded from:  E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\heartd_models\heartD_model.joblib
- * Restarting with watchdog (windowsapi)
- * Debugger is active!
- * Debugger PIN: 506-842-495
- * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_diabetes.py', reloading
- * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_diabetes.py', reloading
- * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_diabetes.py', reloading
-Current working directory:  E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
-Model loaded from:  E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\heartd_models\heartD_model.joblib
- * Restarting with watchdog (windowsapi)
- * Debugger is active!
- * Debugger PIN: 506-842-495
- * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_diabetes.py', reloading
- * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_diabetes.py', reloading
- * Detected change in 'E:\\Coding Project Files\\Competition-Dev\\TSDN-2024\\MediSCope-V1\\models_loader\\disease_loader\\fc_diabetes.py', reloading
-Current working directory:  E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
-Model loaded from:  E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\heartd_models\heartD_model.joblib
  * Restarting with watchdog (windowsapi)
  * Debugger is active!
  * Debugger PIN: 506-842-495
