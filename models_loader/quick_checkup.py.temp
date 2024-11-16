@@ -16,8 +16,7 @@ SYMP_DESC_PATH = os.path.join(BASE_DIR, "../model-notebook/datasets/quick_checku
 SYMPTOM_PRECAUTION_PATH = os.path.join(BASE_DIR, "../model-notebook/datasets/quick_checkup/symptom_precaution.csv")
 SYMP_SEVERITY_PATH = os.path.join(BASE_DIR, "../model-notebook/datasets/quick_checkup/Symptom-severity.csv")
 
-try:
-    # Load the machine learning model and datasets
+try:    
     loaded_rf = joblib.load(MODEL_PATH)
     symptom_Description = pd.read_csv(SYMP_DESC_PATH)
     Symptom_Precaution = pd.read_csv(SYMPTOM_PRECAUTION_PATH)
