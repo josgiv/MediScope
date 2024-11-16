@@ -21,13 +21,11 @@ def setup_temp_dir():
     logger.info(f"Temporary files directory set up at: {TEMP_DIR}")
 
 def cleanup_temp_dir():
-    # Remove the temporary files directory if it exists
     if os.path.exists(TEMP_DIR):
         shutil.rmtree(TEMP_DIR)
         logger.info("Temporary files directory removed.")
 
 def run_flask_app(script, log_file):
-    # Start Flask app in background with log and CORS handling
     if os.path.exists(log_file):
         os.remove(log_file)
 
@@ -127,3 +125,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

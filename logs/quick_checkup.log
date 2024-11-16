@@ -8,9 +8,3 @@ Press CTRL+C to quit
  * Restarting with watchdog (windowsapi)
  * Debugger is active!
  * Debugger PIN: 506-842-495
-127.0.0.1 - - [16/Nov/2024 19:42:32] "OPTIONS /quick-checkup HTTP/1.1" 200 -
-127.0.0.1 - - [16/Nov/2024 19:42:32] "POST /quick-checkup HTTP/1.1" 200 -
-127.0.0.1 - - [16/Nov/2024 19:42:44] "OPTIONS /quick-checkup HTTP/1.1" 200 -
-127.0.0.1 - - [16/Nov/2024 19:42:44] "POST /quick-checkup HTTP/1.1" 200 -
-127.0.0.1 - - [16/Nov/2024 20:12:08] "OPTIONS /quick-checkup HTTP/1.1" 200 -
-127.0.0.1 - - [16/Nov/2024 20:12:08] "POST /quick-checkup HTTP/1.1" 200 -
