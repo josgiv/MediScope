@@ -46,14 +46,17 @@ def run_flask_app(script, log_file):
         os.remove(script)
 
 def install_next_if_needed():
-    """Check if Next.js is installed, if not, install it."""
+    """Check if Next.js is installed, if not, install it in 'web' directory."""
     web_dir = "web"
     package_path = os.path.join(web_dir, "node_modules", "next")
     
     if not os.path.exists(package_path):
         logger.info("Next.js belum terinstall. Memulai instalasi...")
-        install_command = "npm install" if platform.system() != "Windows" else "npm install"
+        
+        # Pastikan berpindah ke direktori 'web' sebelum instalasi
+        install_command = "npm install next" if platform.system() != "Windows" else "npm install next"
         subprocess.run(install_command, shell=True, cwd=web_dir)
+        
         logger.info("Next.js berhasil diinstall.")
     else:
         logger.info("Next.js sudah terinstall. Langsung menjalankan server dev.")
