@@ -3,5 +3,13 @@
 INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
- * Running on http://192.168.80.121:5000
+ * Running on http://192.168.20.2:5000
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2024 20:13:24] "OPTIONS /full-checkup HTTP/1.1" 200 -
+INFO:root:Attempt 1: Requesting prediction from http://localhost:5001/fc-stroke
+INFO:root:Attempt 1: Requesting prediction from http://localhost:5002/fc-heartd
+INFO:root:Attempt 1: Requesting prediction from http://localhost:5003/fc-diabetes
+INFO:root:Received response from http://localhost:5002/fc-heartd: {'faktor_risiko_heartd': 'Faktor-faktor risiko untuk penyakit jantung: Tembakau, usia lanjut, kolesterol darah tinggi, obesitas, diabetes, stres, kondisi autoimun', 'prediksi_heartd': 'Pasien kemungkinan besar memiliki penyakit jantung.', 'saran_heartd': 'Beberapa langkah pencegahan untuk mengurangi risiko penyakit jantung: Makan diet sehat, berolahraga secara teratur, batasi alkohol, jangan merokok, kelola stres.'}
+INFO:root:Received response from http://localhost:5003/fc-diabetes: {'faktor_risiko_diabetes': 'Hal-hal yang menyebabkan dapat terkena diabetes: Penyakit arteri koroner dengan nyeri dada, serangan jantung, stroke, dan penyempitan arteri', 'prediksi_diabetes': 'Anda tidak berkemungkinan terkena Diabetes.', 'saran_diabetes': 'Anda tetap dapat melakukan hal ini untuk mencegah terkena diabetes: Makan makanan seimbang, berolahraga, konsultasi dengan dokter, lakukan follow-up.'}
+INFO:root:Received response from http://localhost:5001/fc-stroke: {'faktor_risiko_stroke': 'Hal-hal yang dapat menyebabkan stroke: Obesitas, konsumsi alkohol berat, penggunaan narkoba ilegal, hipertensi, merokok, kolesterol tinggi', 'prediksi_stroke': 'Anda tidak berkemungkinan terkena Stroke.', 'saran_stroke': 'Anda tetap dapat melakukan hal ini untuk mencegah stroke: Pola makan sehat, olahraga secara teratur, serta hindari merokok dan mengonsumsi alkohol berlebihan'}
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2024 20:13:24] "POST /full-checkup HTTP/1.1" 200 -

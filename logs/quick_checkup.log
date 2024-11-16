@@ -3,8 +3,14 @@
 WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5010
- * Running on http://192.168.80.121:5010
+ * Running on http://192.168.20.2:5010
 Press CTRL+C to quit
  * Restarting with watchdog (windowsapi)
  * Debugger is active!
  * Debugger PIN: 506-842-495
+127.0.0.1 - - [16/Nov/2024 19:42:32] "OPTIONS /quick-checkup HTTP/1.1" 200 -
+127.0.0.1 - - [16/Nov/2024 19:42:32] "POST /quick-checkup HTTP/1.1" 200 -
+127.0.0.1 - - [16/Nov/2024 19:42:44] "OPTIONS /quick-checkup HTTP/1.1" 200 -
+127.0.0.1 - - [16/Nov/2024 19:42:44] "POST /quick-checkup HTTP/1.1" 200 -
+127.0.0.1 - - [16/Nov/2024 20:12:08] "OPTIONS /quick-checkup HTTP/1.1" 200 -
+127.0.0.1 - - [16/Nov/2024 20:12:08] "POST /quick-checkup HTTP/1.1" 200 -
