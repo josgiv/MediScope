@@ -1,18 +1,18 @@
- * Serving Flask app 'fc_stroke.py'
+ * Serving Flask app 'fc_stroke'
  * Debug mode: on
-ce.
-[2024-11-16 14:35:40,500] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
-[2024-11-16 14:35:41,681] INFO: Model loaded successfully from E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\stroke_model.joblib
-[2024-11-16 14:35:41,682] INFO: Starting Flask app for Stroke prediction.
-[2024-11-16 14:35:46,233] INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+rvice.
+[2024-11-16 16:30:00,743] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
+[2024-11-16 16:30:02,078] INFO: Model loaded successfully from E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\stroke_model.joblib
+[2024-11-16 16:30:02,079] INFO: Starting Flask app for Stroke prediction.
+[2024-11-16 16:30:02,125] INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5001
- * Running on http://10.234.12.241:5001
-[2024-11-16 14:35:46,233] INFO: [33mPress CTRL+C to quit[0m
-[2024-11-16 14:35:46,262] INFO:  * Restarting with watchdog (windowsapi)
-[2024-11-16 14:35:47,713] INFO: Starting fc_stroke service.
-[2024-11-16 14:35:47,713] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
-[2024-11-16 14:35:49,163] INFO: Model loaded successfully from E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\stroke_model.joblib
-[2024-11-16 14:35:49,164] INFO: Starting Flask app for Stroke prediction.
-[2024-11-16 14:35:49,188] WARNING:  * Debugger is active!
-[2024-11-16 14:35:49,194] INFO:  * Debugger PIN: 506-842-495
+ * Running on http://192.168.80.121:5001
+[2024-11-16 16:30:02,125] INFO: [33mPress CTRL+C to quit[0m
+[2024-11-16 16:30:02,142] INFO:  * Restarting with watchdog (windowsapi)
+[2024-11-16 16:30:03,509] INFO: Starting fc_stroke service.
+[2024-11-16 16:30:03,509] INFO: Current working directory: E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1
+[2024-11-16 16:30:04,767] INFO: Model loaded successfully from E:\Coding Project Files\Competition-Dev\TSDN-2024\MediSCope-V1\models\full_checkup\stroke_model.joblib
+[2024-11-16 16:30:04,767] INFO: Starting Flask app for Stroke prediction.
+[2024-11-16 16:30:04,796] WARNING:  * Debugger is active!
+[2024-11-16 16:30:04,801] INFO:  * Debugger PIN: 506-842-495
