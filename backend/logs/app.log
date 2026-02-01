@@ -1,0 +1,9 @@
+[2026-01-27 10:53:01,493] INFO [src.services.diabetes_service]: DiabetesService resources loaded successfully.
+[2026-01-27 10:53:01,591] INFO [src.services.heart_service]: HeartService resources loaded successfully.
+[2026-01-27 10:53:01,592] INFO [src.services.stroke_service]: StrokeService resources loaded successfully.
+[2026-01-27 10:53:01,595] INFO [src.services.quick_checkup_service]: QuickCheckupService resources loaded successfully.
+[2026-01-27 10:53:01,597] INFO [src.app]: Initializing Flask App...
+[2026-01-27 10:53:01,600] INFO [__main__]: Starting Unified Backend Server on port 5000
+[2026-01-27 10:53:20,870] INFO [src.api.routes]: Received quick-checkup request
+[2026-01-27 10:53:29,645] INFO [src.api.routes]: Received quick-checkup request
+[2026-01-27 10:54:01,912] INFO [src.api.routes]: Received full-checkup request

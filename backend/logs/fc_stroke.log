@@ -1,0 +1,18 @@
+ * Serving Flask app 'fc_stroke'
+ * Debug mode: on
+rvice.
+[2026-01-27 10:45:13,730] INFO: Current working directory: D:\Dev_Drive\Coding Project Files\Competition_Dev\TSDN-2024\MediSCope-V1\backend
+[2026-01-27 10:45:14,843] INFO: Model loaded successfully from D:\Dev_Drive\Coding Project Files\Competition_Dev\TSDN-2024\MediSCope-V1\backend\assets\models\full_checkup\stroke_model.joblib
+[2026-01-27 10:45:14,843] INFO: Starting Flask app for Stroke prediction.
+[2026-01-27 10:45:14,865] INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.151:5001
+[2026-01-27 10:45:14,868] INFO: [33mPress CTRL+C to quit[0m
+[2026-01-27 10:45:14,869] INFO:  * Restarting with stat
+[2026-01-27 10:45:15,698] INFO: Starting fc_stroke service.
+[2026-01-27 10:45:15,698] INFO: Current working directory: D:\Dev_Drive\Coding Project Files\Competition_Dev\TSDN-2024\MediSCope-V1\backend
+[2026-01-27 10:45:16,702] INFO: Model loaded successfully from D:\Dev_Drive\Coding Project Files\Competition_Dev\TSDN-2024\MediSCope-V1\backend\assets\models\full_checkup\stroke_model.joblib
+[2026-01-27 10:45:16,703] INFO: Starting Flask app for Stroke prediction.
+[2026-01-27 10:45:16,711] WARNING:  * Debugger is active!
+[2026-01-27 10:45:16,713] INFO:  * Debugger PIN: 111-576-862

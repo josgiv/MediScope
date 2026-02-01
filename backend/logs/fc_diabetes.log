@@ -1,0 +1,28 @@
+ * Serving Flask app 'fc_diabetes'
+ * Debug mode: on
+rvice.
+[2026-01-27 10:45:14,729] INFO: Current working directory: D:\Dev_Drive\Coding Project Files\Competition_Dev\TSDN-2024\MediSCope-V1\backend
+[2026-01-27 10:45:14,729] INFO: Model path: D:\Dev_Drive\Coding Project Files\Competition_Dev\TSDN-2024\MediSCope-V1\backend\assets\models\full_checkup\diabetes_models\svc_diabetes.joblib
+[2026-01-27 10:45:14,729] INFO: Dataset path: D:\Dev_Drive\Coding Project Files\Competition_Dev\TSDN-2024\MediSCope-V1\backend\notebooks\datasets\full_checkup\diabetes-dataset.csv
+[2026-01-27 10:45:14,729] INFO: Risk factors path: D:\Dev_Drive\Coding Project Files\Competition_Dev\TSDN-2024\MediSCope-V1\backend\notebooks\datasets\full_checkup\disease_riskFactors.csv
+[2026-01-27 10:45:14,839] INFO: Model successfully loaded.
+[2026-01-27 10:45:14,842] INFO: Dataset successfully loaded.
+[2026-01-27 10:45:14,843] INFO: Dataset scaling completed.
+[2026-01-27 10:45:14,844] INFO: Starting Flask app.
+[2026-01-27 10:45:14,865] INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://192.168.0.151:5003
+[2026-01-27 10:45:14,865] INFO: [33mPress CTRL+C to quit[0m
+[2026-01-27 10:45:14,866] INFO:  * Restarting with stat
+[2026-01-27 10:45:16,594] INFO: Starting fc_diabetes service.
+[2026-01-27 10:45:16,594] INFO: Current working directory: D:\Dev_Drive\Coding Project Files\Competition_Dev\TSDN-2024\MediSCope-V1\backend
+[2026-01-27 10:45:16,594] INFO: Model path: D:\Dev_Drive\Coding Project Files\Competition_Dev\TSDN-2024\MediSCope-V1\backend\assets\models\full_checkup\diabetes_models\svc_diabetes.joblib
+[2026-01-27 10:45:16,594] INFO: Dataset path: D:\Dev_Drive\Coding Project Files\Competition_Dev\TSDN-2024\MediSCope-V1\backend\notebooks\datasets\full_checkup\diabetes-dataset.csv
+[2026-01-27 10:45:16,594] INFO: Risk factors path: D:\Dev_Drive\Coding Project Files\Competition_Dev\TSDN-2024\MediSCope-V1\backend\notebooks\datasets\full_checkup\disease_riskFactors.csv
+[2026-01-27 10:45:16,680] INFO: Model successfully loaded.
+[2026-01-27 10:45:16,683] INFO: Dataset successfully loaded.
+[2026-01-27 10:45:16,684] INFO: Dataset scaling completed.
+[2026-01-27 10:45:16,685] INFO: Starting Flask app.
+[2026-01-27 10:45:16,693] WARNING:  * Debugger is active!
+[2026-01-27 10:45:16,695] INFO:  * Debugger PIN: 111-576-862
